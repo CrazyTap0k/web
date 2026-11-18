@@ -1,0 +1,62 @@
+/* Єдина зовнішня таблиця стилів для всіх трьох сторінок. */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background-color: #e9f2ed;
+  background-image: url("image/background.svg");
+  color: #263a34;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  font-style: italic;
+  line-height: 1.65;
+}
+.sheet {
+  width: 100%;
+  max-width: 62rem;
+  margin: 24px auto;
+  background-color: #fcfefc;
+  border: 1px solid #caddd4;
+  border-radius: 16px;
+  overflow-wrap: anywhere;
+}
+header, footer, figure { margin-left: 5%; margin-right: 5%; }
+header, footer { padding: 16px 0; }
+footer { border-top: 1px solid #dce9e2; font-size: .9rem; }
+h1 {
+  text-align: center;
+  color: #164a3d;
+  font-weight: 700;
+  font-style: normal;
+  font-size: clamp(1.7rem, 5vw, 2.7rem);
+  line-height: 1.2;
+  margin: 14px 5% 22px;
+}
+h2 { margin: 16px 5% 8px; color: #225447; font-size: 1.3rem; }
+p {
+  margin: 0 5% 16px;
+  text-indent: 1.7em;
+  text-align: justify;
+}
+nav ul {
+  margin: 0; padding: 0;
+  list-style: none;
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 20px;
+}
+nav { padding: 8px; border-block: 1px solid #dce9e2; font-style: normal; }
+nav [aria-current="page"] { font-weight: 700; }
+a:link { color: #176346; text-decoration: none; }
+a:visited { color: #663b86; text-decoration: none; }
+a:hover { color: #a12d0b; text-decoration: underline; }
+a:focus-visible { outline: 2px solid #89470f; outline-offset: 3px; text-decoration: underline; }
+a:active { color: #1646c2; }
+figure { margin-top: 12px; margin-bottom: 18px; }
+figure img { max-width: 100%; height: auto; display: block; border-radius: 10px; }
+figcaption { margin-top: 7px; font-size: .9rem; line-height: 1.35; }
+.article { display: flow-root; }
+.figure-left { float: left; width: min(34%, 280px); margin-right: 4%; }
+.figure-right { float: right; width: min(40%, 340px); margin-left: 4%; }
+.article p { hyphens: auto; }
+@media (max-width: 600px) {
+  .sheet { margin: 12px auto; border-radius: 0; }
+  .figure-left, .figure-right { float: none; width: auto; margin: 12px 5% 18px; }
+}

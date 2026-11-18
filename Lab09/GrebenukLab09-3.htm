@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Іван Гребенюк">
+  <title>Класи menu та small — Лабораторна №9</title>
+  <link rel="stylesheet" href="assets/base.css">
+  <style>
+    .menu-list {
+      display: flex; flex-wrap: wrap; gap: 8px;
+      list-style: none; padding: 0; margin: 14px 0 24px;
+    }
+    .menu {
+      display: inline-block; padding: 7px 12px; border-radius: 7px;
+      border: 1px solid #557a69; background-color: #e7f3ec;
+      color: #19483a; font-weight: 700; text-decoration: none;
+    }
+    .menu:hover, .menu:focus-visible, .menu[aria-current="page"] {
+      background-color: #235b47; color: #fff; text-decoration: underline;
+    }
+    .small { font-size: .85rem; color: #4a5b56; margin-bottom: 4px; overflow-wrap: anywhere; }
+  </style>
+</head>
+<body>
+  <main>
+    <nav class="back" aria-label="Навігація"><a href="index.html">← Усі завдання</a></nav>
+    <header>
+      <p class="eyebrow">ЛАБОРАТОРНА №9 · Іван Гребенюк · 305-ТН</p>
+      <h1>Класи menu та small</h1>
+    </header>
+    <p>Клас <code>.menu</code> оформлює посилання, а <code>.small</code> — короткі відомості про документ.</p>
+    <nav aria-label="Меню лабораторної">
+      <ul class="menu-list">
+        <li><a class="menu" href="index.html">Головна</a></li>
+        <li><a class="menu" href="GrebenukLab09-1.htm">Стилі заголовків</a></li>
+        <li><a class="menu" href="GrebenukLab09-2.htm">Вільні класи</a></li>
+        <li><a class="menu" href="GrebenukLab09-3.htm" aria-current="page">Меню й відомості</a></li>
+      </ul>
+    </nav>
+    <footer>
+      <p class="small">Автор — Іван Гребенюк, група 305-ТН.</p>
+      <p class="small">Адреса сторінки в архіві — <code>GrebenukLab09-3.htm</code>.</p>
+      <p class="small">Робота відкривається локально у браузері без сервера.</p>
+    </footer>
+  </main>
+</body>
+</html>

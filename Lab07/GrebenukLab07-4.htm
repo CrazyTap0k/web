@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Замовлення товарів · Лабораторна №7</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <script defer src="assets/forms.js"></script>
+</head>
+<body>
+<main>
+  <header>
+    <p class="eyebrow">ЛАБОРАТОРНА РОБОТА №7 · ГРЕБЕНЮК ІВАН · 305-ТН</p>
+    <nav aria-label="Навігація"><a href="index.html">Усі завдання</a></nav>
+  </header>
+  <h2>Замовлення товарів</h2>
+  <p>Це навчальна форма. Використовуйте вигадані реквізити. У списку можна вибрати декілька товарів, затиснувши Ctrl (⌘ на Mac).</p>
+  <form class="form" action="FormAccepted.html" method="post" data-demo>
+    <label class="field">Номер банківського рахунку
+      <input type="text" name="account" maxlength="34" placeholder="TEST-00000001" autocomplete="off" required>
+    </label>
+    <label class="field">Особистий номер користувача
+      <input type="text" name="user_id" inputmode="numeric" pattern="[0-9]{4,12}" title="Від 4 до 12 цифр" maxlength="12" placeholder="0001" autocomplete="off" required>
+    </label>
+    <label class="field">Товари (виберіть один або декілька)
+      <select name="products" multiple size="5" required><option value="notebook">Блокнот A5</option><option value="pen">Гелева ручка</option><option value="folder">Папка для документів</option><option value="usb">USB-накопичувач 32 ГБ</option><option value="mouse">Бездротова миша</option></select>
+    </label>
+    <label class="field">Коментар до замовлення
+      <textarea name="comments" cols="50" rows="4" maxlength="1000"></textarea>
+    </label>
+    <fieldset>
+      <legend>Вид оплати</legend>
+      <label class="choice"><input type="radio" name="payment" value="cash" required> Готівковий розрахунок</label>
+      <label class="choice"><input type="radio" name="payment" value="cashless"> Безготівковий розрахунок</label>
+    </fieldset>
+    <fieldset>
+      <legend>Додаткова інформація у відповіді</legend>
+      <label class="choice"><input type="checkbox" name="extra" value="balance"> Дані про залишок на рахунку</label>
+      <label class="choice"><input type="checkbox" name="extra" value="payments"> Список останніх виплат по рахунку</label>
+    </fieldset>
+    <div class="actions">
+      <input type="reset" value="Очистити форму">
+      <input type="submit" value="Оформити замовлення">
+      
+    </div>
+    <div role="status"></div>
+  </form>
+</main>
+</body>
+</html>

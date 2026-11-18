@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Іван Гребенюк">
+  <title>Класи для різних тегів — Лабораторна №9</title>
+  <link rel="stylesheet" href="assets/base.css">
+  <style>
+    /* Класи не обмежені назвою тега. */
+    .section-title {
+      font: 700 1.3rem/1.25 Georgia, serif;
+      color: #225444; border-bottom: 2px solid #b4d0c1;
+      padding-bottom: 5px; margin: 20px 0 8px;
+    }
+    .body-text { font-size: 1rem; color: #2e423e; margin: 0 0 10px; }
+    .note {
+      font-size: .9rem; font-style: italic; color: #564025;
+      background-color: #fff4de; border-left: 3px solid #b27b2d;
+      padding: 8px 12px; margin: 8px 0 16px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <nav class="back" aria-label="Навігація"><a href="index.html">← Усі завдання</a></nav>
+    <header>
+      <p class="eyebrow">ЛАБОРАТОРНА №9 · Іван Гребенюк · 305-ТН</p>
+      <h1>Класи для різних тегів</h1>
+    </header>
+    <p>Коротка пам’ятка для підготовки до навчального заняття. Класи повторюються навіть на різних HTML-тегах.</p>
+    <section aria-labelledby="before">
+      <h2 id="before" class="section-title">Перед заняттям</h2>
+      <p class="body-text">Переглянь умову і випиши незнайомі поняття. Заздалегідь підготуй папку для HTML-файлів і стилів.</p>
+      <aside class="note">Виноска. Зручно зберігати зображення й CSS у підпапці <code>assets</code>.</aside>
+    </section>
+    <section aria-labelledby="after">
+      <h3 id="after" class="section-title">Після заняття</h3>
+      <div class="body-text">Перевір сторінку у браузері й переконайся, що всі локальні посилання працюють після розпакування архіву.</div>
+      <p class="note">Виноска. Початкову сторінку зазвичай називають <code>index.html</code>.</p>
+    </section>
+  </main>
+</body>
+</html>

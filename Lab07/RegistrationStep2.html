@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Другий етап реєстрації · Лабораторна №7</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <script defer src="assets/forms.js"></script>
+</head>
+<body>
+<main>
+  <header>
+    <p class="eyebrow">ЛАБОРАТОРНА РОБОТА №7 · ГРЕБЕНЮК ІВАН · 305-ТН</p>
+    <nav aria-label="Навігація"><a href="index.html">Усі завдання</a></nav>
+  </header>
+  <h2>Другий етап реєстрації</h2>
+  <p>Виберіть участь у студентському семінарі та завершіть демонстраційну реєстрацію.</p>
+  <form class="form" action="FormAccepted.html" method="post" data-demo>
+        <fieldset>
+      <legend>Участь</legend>
+      <label class="choice"><input type="radio" name="participation" value="speaker" required> Виступити з доповіддю</label>
+      <label class="choice"><input type="radio" name="participation" value="listener"> Взяти участь як слухач</label>
+    </fieldset>
+    <div class="actions">
+      <input type="reset" value="Очистити форму">
+      <input type="submit" value="Завершити реєстрацію">
+      
+    </div>
+    <div role="status"></div>
+  </form>
+</main>
+</body>
+</html>

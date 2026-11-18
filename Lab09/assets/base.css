@@ -1,0 +1,28 @@
+/* Спільне оформлення сторінок. Правила завдань — у їхніх блоках <style>. */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  color: #253937;
+  background-color: #edf3ef;
+  font: 17px/1.6 system-ui, sans-serif;
+}
+main {
+  max-width: 780px;
+  margin: 32px auto;
+  padding: clamp(18px, 5vw, 40px);
+  border: 1px solid #d2e2d9;
+  border-radius: 18px;
+  background-color: white;
+}
+header { margin: 14px 0 20px; }
+h1, h2, h3 { line-height: 1.2; }
+h1 { margin: 5px 0 12px; color: #193c34; font-size: clamp(1.9rem, 6vw, 2.8rem); }
+h2 { font-size: 1.3rem; }
+p { margin: 0 0 12px; }
+a { color: #075c64; text-underline-offset: .18em; }
+a:hover { color: #8a3d0d; }
+a:focus-visible { outline: 3px solid #943b00; outline-offset: 4px; }
+.eyebrow { color: #405e54; font-size: .8rem; font-weight: 700; letter-spacing: .03em; }
+.task-list { padding-left: 1.5em; }
+.task-list li { margin-bottom: 12px; }
+@media (max-width: 540px) { main { margin: 0; border: 0; border-radius: 0; } }

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Анкета за зразком · Лабораторна №7</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <script defer src="assets/forms.js"></script>
+</head>
+<body>
+<main>
+  <header>
+    <p class="eyebrow">ЛАБОРАТОРНА РОБОТА №7 · ГРЕБЕНЮК ІВАН · 305-ТН</p>
+    <nav aria-label="Навігація"><a href="index.html">Усі завдання</a></nav>
+  </header>
+  <form class="form" aria-labelledby="anketa-heading" action="RegistrationStep2.html" method="post" data-demo>
+    <table class="anketa">
+      <colgroup><col class="number"><col class="prompt"><col></colgroup>
+      <thead><tr><th colspan="3"><h2 id="anketa-heading">Анкета</h2></th></tr></thead>
+      <tbody>
+      <tr>
+        <td>1.</td><th scope="row"><label for="surname">Прізвище</label></th>
+        <td><input class="field-input" id="surname" name="surname" type="text" autocomplete="family-name" required></td>
+      </tr>
+      <tr>
+        <td>2.</td><th scope="row"><label for="name">Ім’я, по батькові</label></th>
+        <td><input class="field-input" id="name" name="name" type="text" autocomplete="given-name" required></td>
+      </tr>
+      <tr>
+        <td>3.</td><th scope="row"><label for="birth">Число і рік народження</label></th>
+        <td><input class="field-input" id="birth" name="birth" type="date" autocomplete="bday"></td>
+      </tr>
+      <tr>
+        <td>4.</td><th scope="row"><label for="address">Домашня адреса</label></th>
+        <td><input class="field-input" id="address" name="address" type="text" autocomplete="street-address"></td>
+      </tr>
+      <tr>
+        <td>5.</td><th scope="row"><label for="school">Місце навчання (роботи)</label></th>
+        <td><input class="field-input" id="school" name="school" type="text"></td>
+      </tr>
+      <tr>
+        <td>6.</td><th scope="row"><label for="phone">Домашній (робочий) телефон</label></th>
+        <td><input class="field-input" id="phone" name="phone" type="tel" autocomplete="tel"></td>
+      </tr>
+      <tr>
+        <td>7.</td><th scope="row"><label for="email">E-mail</label></th>
+        <td><input class="field-input" id="email" name="email" type="email" autocomplete="email" required></td>
+      </tr>
+      <tr><td>8.</td><th scope="row">Область наукових інтересів</th><td><ol><li><input class="field-input" type="text" name="interest1" aria-label="Науковий інтерес 1"></li><li><input class="field-input" type="text" name="interest2" aria-label="Науковий інтерес 2"></li><li><input class="field-input" type="text" name="interest3" aria-label="Науковий інтерес 3"></li><li><input class="field-input" type="text" name="interest4" aria-label="Науковий інтерес 4"></li><li><input class="field-input" type="text" name="interest5" aria-label="Науковий інтерес 5"></li><li><input class="field-input" type="text" name="interest6" aria-label="Науковий інтерес 6"></li></ol></td></tr>
+      </tbody>
+      <tfoot><tr><td colspan="3">
+    <div class="actions">
+      <input type="reset" value="Відмінити введення">
+      <input type="submit" value="Надіслати дані та перейти до 2 етапу реєстрації">
+      
+    </div>
+    <div role="status"></div>
+      </td></tr></tfoot>
+    </table>
+  </form>
+</main>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="100" viewBox="0 0 180 100">
+  <rect width="180" height="100" fill="#e9f2ed"/>
+  <g fill="none" stroke="#c9e0d8" stroke-width="1.2">
+    <path d="M-90 25 Q-45 2 0 25 T90 25 T180 25 T270 25"/>
+    <path d="M-90 75 Q-45 52 0 75 T90 75 T180 75 T270 75"/>
+    <path d="M-90 35 Q-45 12 0 35 T90 35 T180 35 T270 35"/>
+    <path d="M-90 85 Q-45 62 0 85 T90 85 T180 85 T270 85"/>
+  </g>
+</svg>
