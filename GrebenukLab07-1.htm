@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Анкета студента · Лабораторна №7</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <script defer src="assets/forms.js"></script>
+</head>
+<body>
+<main>
+  <header>
+    <p class="eyebrow">ЛАБОРАТОРНА РОБОТА №7 · ГРЕБЕНЮК ІВАН · 305-ТН</p>
+    <nav aria-label="Навігація"><a href="index.html">Усі завдання</a></nav>
+  </header>
+  <h2>Анкета студента</h2>
+  <p>Заповніть анкету. Сторінка результату відкриється в новій вкладці.</p>
+  <form class="form" action="FormAccepted.html" method="post" target="_blank" rel="noopener" data-demo>
+    <label class="field">Ваше ім’я
+      <input type="text" name="name" maxlength="40" size="40" autocomplete="name" required>
+    </label>
+    <fieldset>
+      <legend>Ваша стать</legend>
+      <label class="choice"><input type="radio" name="pol" value="male" required> Чоловіча</label>
+      <label class="choice"><input type="radio" name="pol" value="female"> Жіноча</label>
+    </fieldset>
+    <label class="field">На якому курсі Ви навчаєтесь?
+      <select name="curs"><option value="1">Перший</option><option value="2">Другий</option><option value="3">Третій</option><option value="4">Четвертий</option><option value="5">П’ятий</option></select>
+    </label>
+    <fieldset>
+      <legend>Які дисципліни Ви вивчаєте?</legend>
+      <label class="choice"><input type="checkbox" name="web" value="yes" checked> WEB-програмування</label>
+      <label class="choice"><input type="checkbox" name="eldinam" value="yes"> Технічна електродинаміка</label>
+      <label class="choice"><input type="checkbox" name="db" value="yes"> Бази даних</label>
+      <label class="choice"><input type="checkbox" name="net" value="yes"> Комп’ютерні мережі</label>
+      <label class="choice"><input type="checkbox" name="algo" value="yes"> Алгоритми та структури даних</label>
+    </fieldset>
+    <label class="field">Напишіть декілька слів про себе
+      <textarea name="about" rows="6" cols="60" maxlength="800"></textarea>
+    </label>
+    <label class="field">Прикріпіть файл за бажанням
+      <input type="file" name="friend" accept=".pdf,.jpg,.jpeg,.png">
+    </label>
+    <div class="actions">
+      <input type="reset" value="Очистити форму">
+      <input type="submit" value="Відіслати дані">
+      
+    </div>
+    <div role="status"></div>
+  </form>
+</main>
+</body>
+</html>
