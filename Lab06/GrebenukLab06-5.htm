@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Карта з областями довільної форми · Лабораторна №6</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <script defer src="assets/maps.js"></script>
+</head>
+<body>
+<main>
+  <header>
+    <p class="eyebrow">ЛАБОРАТОРНА РОБОТА №6 · ГРЕБЕНЮК ІВАН · 305-ТН</p>
+    <nav aria-label="Навігація"><a href="index.html">Усі завдання</a></nav>
+  </header>
+  <h1>Карта з областями довільної форми</h1>
+  <p>Наведіть курсор на ліс, звивисту річку або луки. Межі активних зон повторюють контури на схемі.</p>
+  <figure>
+    <img class="map-img" src="assets/landscape.svg" width="660" height="250" usemap="#map5" alt="Схематичний краєвид із лісом, річкою та луками">
+    <map name="map5">
+      <area shape="poly" coords="22,106,81,65,125,77,166,44,213,61,262,99,218,123,178,109,137,132,87,120,51,138,22,106" href="#forest" alt="Ліс" title="Лісова стежка">
+      <area shape="poly" coords="18,192,85,156,156,164,208,142,268,156,325,134,395,158,454,134,526,154,573,144,639,165,638,209,580,191,526,203,467,187,412,205,325,180,274,203,206,190,158,208,86,200,26,226,18,192" href="#stream" alt="Річка" title="Звивиста річка">
+      <area shape="poly" coords="333,100,373,48,432,59,478,24,520,54,575,40,635,104,591,119,552,92,518,107,464,91,416,116,369,96,333,100" href="#field" alt="Луки" title="Луки">
+    </map>
+  </figure>
+  <section class="info" id="forest"><h2>Ліс</h2><p>Ділянка з деревами на пагорбах.</p></section>
+  <section class="info" id="stream"><h2>Річка</h2><p>Вода тече долиною та утворює вигини.</p></section>
+  <section class="info" id="field"><h2>Луки</h2><p>Відкрита ділянка долини, вкрита травами.</p></section>
+
+</main>
+</body>
+</html>

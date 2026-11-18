@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="255" viewBox="0 0 660 255">
+  <rect width="660" height="255" rx="18" fill="#eaf3f2"/>
+  <polygon points="28,190 119,38 215,190" fill="#315c86"/>
+  <circle cx="326" cy="122" r="82" fill="#136958"/>
+  <rect x="435" y="65" width="198" height="125" fill="#8a461d"/>
+  <g font-family="DejaVu Sans, sans-serif" font-size="19" text-anchor="middle" fill="white">
+    <text x="120" y="157">Про мене</text>
+    <text x="326" y="129">Посилання</text>
+    <text x="534" y="117"><tspan x="534">Моя</tspan><tspan x="534" dy="25">Батьківщина</tspan></text>
+  </g>
+</svg>

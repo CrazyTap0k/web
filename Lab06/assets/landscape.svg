@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="250" viewBox="0 0 660 250">
+<rect width="660" height="250" rx="18" fill="#eef4df"/>
+<polygon points="22,106 81,65 125,77 166,44 213,61 262,99 218,123 178,109 137,132 87,120 51,138" fill="#82af6b" stroke="#345d56" stroke-width="1.4"/>
+<polygon points="18,192 85,156 156,164 208,142 268,156 325,134 395,158 454,134 526,154 573,144 639,165 638,209 580,191 526,203 467,187 412,205 325,180 274,203 206,190 158,208 86,200 26,226" fill="#76bbdb" stroke="#345d56" stroke-width="1.4"/>
+<polygon points="333,100 373,48 432,59 478,24 520,54 575,40 635,104 591,119 552,92 518,107 464,91 416,116 369,96" fill="#d9bc68" stroke="#345d56" stroke-width="1.4"/>
+<g font-family="DejaVu Sans, sans-serif" font-size="19" text-anchor="middle" fill="#1b352e">
+  <text x="145" y="97">Ліс</text><text x="336" y="167">Річка</text><text x="491" y="78">Луки</text>
+</g>
+</svg>

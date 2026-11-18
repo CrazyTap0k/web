@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Карта зі спливаючими заголовками · Лабораторна №6</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <script defer src="assets/maps.js"></script>
+</head>
+<body>
+<main>
+  <header>
+    <p class="eyebrow">ЛАБОРАТОРНА РОБОТА №6 · ГРЕБЕНЮК ІВАН · 305-ТН</p>
+    <nav aria-label="Навігація"><a href="index.html">Усі завдання</a></nav>
+  </header>
+  <h1>Карта зі спливаючими заголовками</h1>
+  <p>Наведіть курсор на небо, човен, скелю або камінь біля нижнього лівого краю фото. Натисніть на область, щоб перейти до її опису.</p>
+  <figure>
+    <img class="map-img" src="assets/vodopad.jpeg" width="300" height="200" usemap="#map2" alt="Водоспад, човен і кам’янистий берег">
+    <map name="map2">
+      <area shape="rect" coords="51,0,255,31" href="#sky" alt="Блакитне небо" title="Блакитне небо">
+      <area shape="poly" coords="127,127,169,126,198,130,193,135,130,135,127,127" href="#boat" alt="Човен" title="Човен">
+      <area shape="poly" coords="0,10,15,14,30,27,48,33,40,51,29,61,31,93,19,125,0,128,0,10" href="#cliff" alt="Скеля" title="Скеля">
+      <area shape="circle" coords="50,187,9" href="#stone" alt="Камінь" title="Камінь">
+    </map>
+  </figure>
+  <section class="info" id="sky"><h2>Блакитне небо</h2><p>Над уступом видно блакитне небо й білі хмари.</p></section>
+  <section class="info" id="boat"><h2>Човен</h2><p>Біля підніжжя водоспаду видно маленький човен. Він допомагає оцінити масштаб водоспаду.</p></section>
+  <section class="info" id="cliff"><h2>Скеля</h2><p>Темна скеля ліворуч обрамляє потік води.</p></section>
+  <section class="info" id="stone"><h2>Камінь</h2><p>На передньому плані видно кам’янистий берег.</p></section>
+
+</main>
+</body>
+</html>

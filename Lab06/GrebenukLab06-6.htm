@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Мої одногрупники · Лабораторна №6</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <script defer src="assets/maps.js"></script>
+</head>
+<body>
+<main>
+  <header>
+    <p class="eyebrow">ЛАБОРАТОРНА РОБОТА №6 · ГРЕБЕНЮК ІВАН · 305-ТН</p>
+    <nav aria-label="Навігація"><a href="index.html">Усі завдання</a></nav>
+  </header>
+  <h1>Мої одногрупники</h1>
+  <p>Демонстраційні профілі з ілюстративними фото. Наведіть курсор на портрет для підказки або натисніть для переходу до опису.</p>
+  <div class="grid">
+    <figure class="card">
+    <img class="map-img" src="assets/portrait2.jpg" width="250" height="271" usemap="#friend0" alt="Ілюстративний портрет для профілю «Олександр»">
+    <map name="friend0">
+      <area shape="rect" coords="0,0,250,271" href="#friend-sasha" alt="Олександр" title="Олександр — Цікавиться вебдизайном і робить макети сторінок.">
+    </map>
+      <figcaption>Олександр · <a href="https://images.unsplash.com/photo-1500648767791-00dcc994a43e">Фото з Unsplash</a></figcaption>
+    </figure>
+    <figure class="card">
+    <img class="map-img" src="assets/portrait3.jpg" width="250" height="271" usemap="#friend1" alt="Ілюстративний портрет для профілю «Софія»">
+    <map name="friend1">
+      <area shape="rect" coords="0,0,250,271" href="#friend-sofia" alt="Софія" title="Софія — Вивчає JavaScript і любить працювати над командними проєктами.">
+    </map>
+      <figcaption>Софія · <a href="https://images.unsplash.com/photo-1531123897727-8f129e1688ce">Фото з Unsplash</a></figcaption>
+    </figure>
+  </div>
+  <section class="info" id="friend-sasha"><h2>Олександр</h2><p>Цікавиться вебдизайном і робить макети сторінок.</p></section>
+  <section class="info" id="friend-sofia"><h2>Софія</h2><p>Вивчає JavaScript і любить працювати над командними проєктами.</p></section>
+
+</main>
+</body>
+</html>
