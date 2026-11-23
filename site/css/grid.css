@@ -1,0 +1,163 @@
+.wrapper { width: 100%; height: 100vh; height: 100dvh; padding: 3px; }
+
+
+/* Кожен рівень використовує CSS Grid; float та flex тут відсутні. */
+.wrapper, .stage, .main-column, .content, .left-group, .pair {
+  display: grid; gap: 3px; min-width: 0; min-height: 0;
+}
+.wrapper { grid-template-columns: 100%; grid-template-rows: var(--stage-height) var(--footer-height); }
+.stage { grid-template-columns: var(--stage-columns); grid-template-rows: var(--stage-rows); }
+.main-column { grid-template-columns: 100%; grid-template-rows: var(--blue-height) var(--content-height); }
+.content { grid-template-columns: var(--content-columns); grid-template-rows: var(--content-rows); }
+.left-group { grid-template-columns: 100%; grid-template-rows: var(--pair-height) var(--green-height); }
+.pair { grid-template-columns: var(--pair-columns); grid-template-rows: var(--pair-rows); }
+
+/* До 500px: усі сім блоків в одну колонку. */
+@media (width < 500px) {
+  .wrapper {
+    --stage-height: calc((100% - 3px) * 0.88);
+    --footer-height: calc((100% - 3px) * 0.12);
+    --main-width: 100%;
+    --main-height: calc((100% - 3px) * 0.84);
+    --gray-width: 100%;
+    --gray-height: calc((100% - 3px) * 0.16);
+    --blue-height: calc((100% - 3px) * 0.22);
+    --content-height: calc((100% - 3px) * 0.78);
+    --left-width: 100%;
+    --left-height: calc((100% - 3px) * 0.75);
+    --yellow-width: 100%;
+    --yellow-height: calc((100% - 3px) * 0.25);
+    --pair-height: calc((100% - 3px) * 0.6);
+    --green-height: calc((100% - 3px) * 0.4);
+    --cyan-width: 100%;
+    --cyan-height: calc((100% - 3px) * 0.5);
+    --red-width: 100%;
+    --red-height: calc((100% - 3px) * 0.5);
+    --stage-columns: 100%;
+    --stage-rows: calc((100% - 3px) * 0.84) calc((100% - 3px) * 0.16);
+    --content-columns: 100%;
+    --content-rows: calc((100% - 3px) * 0.75) calc((100% - 3px) * 0.25);
+    --pair-columns: 100%;
+    --pair-rows: calc((100% - 3px) * 0.5) calc((100% - 3px) * 0.5);
+  }
+}
+
+/* Від 500px: центральні блоки поряд, сіра панель унизу. */
+@media (min-width: 500px) {
+  .wrapper {
+    --stage-height: calc((100% - 3px) * 0.88);
+    --footer-height: calc((100% - 3px) * 0.12);
+    --main-width: 100%;
+    --main-height: calc((100% - 3px) * 0.84);
+    --gray-width: 100%;
+    --gray-height: calc((100% - 3px) * 0.16);
+    --blue-height: calc((100% - 3px) * 0.3);
+    --content-height: calc((100% - 3px) * 0.7);
+    --left-width: calc((100% - 3px) * 0.6);
+    --left-height: 100%;
+    --yellow-width: calc((100% - 3px) * 0.4);
+    --yellow-height: 100%;
+    --pair-height: calc((100% - 3px) * 0.45);
+    --green-height: calc((100% - 3px) * 0.55);
+    --cyan-width: calc((100% - 3px) * 0.5);
+    --cyan-height: 100%;
+    --red-width: calc((100% - 3px) * 0.5);
+    --red-height: 100%;
+    --stage-columns: 100%;
+    --stage-rows: calc((100% - 3px) * 0.84) calc((100% - 3px) * 0.16);
+    --content-columns: calc((100% - 3px) * 0.6) calc((100% - 3px) * 0.4);
+    --content-rows: 100%;
+    --pair-columns: calc((100% - 3px) * 0.5) calc((100% - 3px) * 0.5);
+    --pair-rows: 100%;
+  }
+}
+
+/* Від 750px: сіра панель праворуч, жовтий блок під зеленим. */
+@media (min-width: 750px) {
+  .wrapper {
+    --stage-height: calc((100% - 3px) * 0.8);
+    --footer-height: calc((100% - 3px) * 0.2);
+    --main-width: calc((100% - 3px) * 0.8);
+    --main-height: 100%;
+    --gray-width: calc((100% - 3px) * 0.2);
+    --gray-height: 100%;
+    --blue-height: calc((100% - 3px) * 0.35);
+    --content-height: calc((100% - 3px) * 0.65);
+    --left-width: 100%;
+    --left-height: calc((100% - 3px) * 0.7);
+    --yellow-width: 100%;
+    --yellow-height: calc((100% - 3px) * 0.3);
+    --pair-height: calc((100% - 3px) * 0.45);
+    --green-height: calc((100% - 3px) * 0.55);
+    --cyan-width: calc((100% - 3px) * 0.5);
+    --cyan-height: 100%;
+    --red-width: calc((100% - 3px) * 0.5);
+    --red-height: 100%;
+    --stage-columns: calc((100% - 3px) * 0.8) calc((100% - 3px) * 0.2);
+    --stage-rows: 100%;
+    --content-columns: 100%;
+    --content-rows: calc((100% - 3px) * 0.7) calc((100% - 3px) * 0.3);
+    --pair-columns: calc((100% - 3px) * 0.5) calc((100% - 3px) * 0.5);
+    --pair-rows: 100%;
+  }
+}
+
+/* Від 950px: повний макет, ліва група займає 65% центру. */
+@media (min-width: 950px) {
+  .wrapper {
+    --stage-height: calc((100% - 3px) * 0.8);
+    --footer-height: calc((100% - 3px) * 0.2);
+    --main-width: calc((100% - 3px) * 0.8);
+    --main-height: 100%;
+    --gray-width: calc((100% - 3px) * 0.2);
+    --gray-height: 100%;
+    --blue-height: calc((100% - 3px) * 0.4);
+    --content-height: calc((100% - 3px) * 0.6);
+    --left-width: calc((100% - 3px) * 0.65);
+    --left-height: 100%;
+    --yellow-width: calc((100% - 3px) * 0.35);
+    --yellow-height: 100%;
+    --pair-height: calc((100% - 3px) * 0.45);
+    --green-height: calc((100% - 3px) * 0.55);
+    --cyan-width: calc((100% - 3px) * 0.5);
+    --cyan-height: 100%;
+    --red-width: calc((100% - 3px) * 0.5);
+    --red-height: 100%;
+    --stage-columns: calc((100% - 3px) * 0.8) calc((100% - 3px) * 0.2);
+    --stage-rows: 100%;
+    --content-columns: calc((100% - 3px) * 0.65) calc((100% - 3px) * 0.35);
+    --content-rows: 100%;
+    --pair-columns: calc((100% - 3px) * 0.5) calc((100% - 3px) * 0.5);
+    --pair-rows: 100%;
+  }
+}
+
+/* Від 1200px: пропорції зразка, ліва група займає 60% центру. */
+@media (min-width: 1200px) {
+  .wrapper {
+    --stage-height: calc((100% - 3px) * 0.8);
+    --footer-height: calc((100% - 3px) * 0.2);
+    --main-width: calc((100% - 3px) * 0.8);
+    --main-height: 100%;
+    --gray-width: calc((100% - 3px) * 0.2);
+    --gray-height: 100%;
+    --blue-height: calc((100% - 3px) * 0.4);
+    --content-height: calc((100% - 3px) * 0.6);
+    --left-width: calc((100% - 3px) * 0.6);
+    --left-height: 100%;
+    --yellow-width: calc((100% - 3px) * 0.4);
+    --yellow-height: 100%;
+    --pair-height: calc((100% - 3px) * 0.45);
+    --green-height: calc((100% - 3px) * 0.55);
+    --cyan-width: calc((100% - 3px) * 0.5);
+    --cyan-height: 100%;
+    --red-width: calc((100% - 3px) * 0.5);
+    --red-height: 100%;
+    --stage-columns: calc((100% - 3px) * 0.8) calc((100% - 3px) * 0.2);
+    --stage-rows: 100%;
+    --content-columns: calc((100% - 3px) * 0.6) calc((100% - 3px) * 0.4);
+    --content-rows: 100%;
+    --pair-columns: calc((100% - 3px) * 0.5) calc((100% - 3px) * 0.5);
+    --pair-rows: 100%;
+  }
+}
