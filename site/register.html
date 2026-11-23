@@ -20,6 +20,7 @@
       <form id="registration-form" method="post">
         <div class="form-field"><label for="surname">Прізвище</label><input id="surname" name="surname" type="text" autocomplete="family-name" maxlength="60" required></div>
         <div class="form-field"><label for="first-name">Ім’я</label><input id="first-name" name="first-name" type="text" autocomplete="given-name" maxlength="60" required></div>
+        <div class="form-field"><label for="login">Логін</label><input id="login" name="login" type="text" autocomplete="username" minlength="3" maxlength="24" pattern="[A-Za-z0-9_]{3,24}" title="Від 3 до 24 латинських літер, цифр або знаків підкреслення" required></div>
         <div class="form-actions"><button type="submit">Зареєструватись</button></div>
         <p id="form-result" class="form-result" role="status" hidden></p>
       </form>
