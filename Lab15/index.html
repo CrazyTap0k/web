@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Гребенюк Іван Юрійович (Grebenuk), 305-ТН, №07">
+  <meta name="description" content="Лабораторна №15. Умовні конструкції та цикли JavaScript.">
+  <title>Лабораторна №15 — Grebenuk, 305-ТН</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/tasks.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <div class="wrapper">
+    <header class="page-header">
+      <span class="js-mark" aria-hidden="true">JS</span>
+      <div><p class="eyebrow">Гребенюк Іван Юрійович (Grebenuk) · 305-ТН · №07</p>
+        <h1>Лабораторна №15</h1>
+        <p>Умовні конструкції та цикли JavaScript</p>
+      </div>
+    </header>
+    <main>
+      <noscript><p class="notice">Увімкни JavaScript у браузері, щоб виконати завдання.</p></noscript>
+      <section id="task1" aria-labelledby="heading1">
+        <h2 id="heading1">1. Прості числа від 0 до 100</h2>
+        <p>Виведення всіх простих чисел за допомогою циклу <code>while</code>.</p>
+        <button id="run-primes" type="button">Вивести прості числа</button>
+        <pre id="primes-output" class="result" role="status" aria-live="polite"></pre>
+      </section>
+      <section id="task2" aria-labelledby="heading2">
+        <h2 id="heading2">2. Парність чисел від 0 до 10</h2>
+        <p>Функція використовує цикл <code>do…while</code>. Для нуля виводиться окремий опис.</p>
+        <button id="run-parity" type="button">Вивести числа 0–10</button>
+        <pre id="parity-output" class="result" role="status" aria-live="polite"></pre>
+      </section>
+      <section id="task3" aria-labelledby="heading3">
+        <h2 id="heading3">3. Послідовне ділення</h2>
+        <p>Число <code>numb = 10000</code> ділиться на 2, доки результат не стане меншим за 50.</p>
+        <button id="run-division" type="button">Виконати ділення</button>
+        <pre id="division-output" class="result" role="status" aria-live="polite"></pre>
+        <p class="hint">Значення <code>result</code> і <code>counter</code> також виведено в консоль браузера. Відкрити її можна клавішею F12 на вкладці Console.</p>
+      </section>
+      <section id="task4" aria-labelledby="heading4">
+        <h2 id="heading4">4. Місяць і пора року</h2>
+        <p>Номер місяця вводиться у <code>prompt</code>, а назва й пора року виводяться в <code>alert</code>.</p>
+        <button id="run-month" type="button">Ввести номер місяця</button>
+        <output id="month-output" class="result" aria-live="polite">Натисни кнопку та введи число від 1 до 12.</output>
+      </section>
+      <section id="task5" aria-labelledby="heading5">
+        <h2 id="heading5">5. Цельсій → Фаренгейт</h2>
+        <p>Формула: <code>Tf = (9 / 5) * Tc + 32</code>. Результат також з’явиться у <code>alert</code>.</p>
+        <label for="celsius">Температура за Цельсієм, °C</label>
+        <div class="temperature-controls"><input id="celsius" type="number" step="any" value="0" required><button id="run-temperature" type="button">Перевести у °F</button></div>
+        <output id="temperature-output" class="result" aria-live="polite">Введи температуру та натисни кнопку.</output>
+      </section>
+      <section id="task6" aria-labelledby="heading6">
+        <h2 id="heading6">6. День тижня</h2>
+        <p>Число від 1 до 7 вводиться у <code>prompt</code>. Відповідний день виводиться на сторінці: 1 — понеділок, 7 — неділя.</p>
+        <button id="run-weekday" type="button">Ввести номер дня</button>
+        <output id="weekday-output" class="result" aria-live="polite">Натисни кнопку та введи число від 1 до 7.</output>
+      </section>
+    </main>
+    <footer>Лабораторна №15 · Grebenuk · 305-ТН · №07</footer>
+  </div>
+</body>
+</html>
