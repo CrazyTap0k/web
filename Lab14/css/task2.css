@@ -1,0 +1,56 @@
+/* У всіх чотирьох зразках палітра #1/#2/#3 однакова.
+   @media змінює розміщення, розміри тексту та видимі підписи колонок. */
+.task2 { background: #e5e5e5; color: #000; }
+.viewport-context { flex: 0 0 22%; min-height: 0; text-align: center; }
+.viewport-title, .viewport-range { height: 50%; display: flex; justify-content: center;
+  align-items: center; padding: 2px 8px; border: 1px solid #ccc; line-height: 1.15; }
+.viewport-title { height: 60%; font-size: clamp(16px, 3vh, 24px); }
+.viewport-range { height: 40%; color: #888; font-size: clamp(14px, 2.8vh, 22px); }
+.on-sm, .on-md, .on-lg { display: none; }
+.on-xs { display: inline; }
+.task2-stage { flex: 1 1 0; }
+.task2 .grid-box { position: relative; height: calc(100% / 3); padding: 0;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; color: #fff; }
+.grid-box1 { background: #4f81be; }
+.grid-box2 { background: #ffc001; }
+.grid-box3 { background: #c10001; }
+.box-number { font-size: clamp(24px, 9vh, 54px); line-height: 1; font-weight: 400; }
+.column-count { position: absolute; bottom: 25px; left: 0; width: 100%; font-size: clamp(14px, 3vh, 22px); line-height: 1.2; }
+.dimension-line { position: absolute; left: 3px; right: 3px; bottom: 18px; height: 1px; background: currentColor; }
+.dimension-line::before, .dimension-line::after { content: ''; position: absolute; width: 8px; height: 8px; top: -3.5px; }
+.dimension-line::before { left: 0; border-left: 1px solid currentColor; border-bottom: 1px solid currentColor; transform: rotate(45deg); }
+.dimension-line::after { right: 0; border-right: 1px solid currentColor; border-top: 1px solid currentColor; transform: rotate(45deg); }
+.grid-box .dimension-line { display: none; }
+.grid-footer { flex: 0 0 12%; position: relative; min-height: 0; border: 1px solid #ccc; text-align: center; }
+.total-columns { position: absolute; left: 0; right: 0; bottom: 24px; font-size: clamp(14px, 3vh, 22px); line-height: 1.2; }
+.grid-footer .dimension-line { bottom: 14px; }
+
+/* sm: #1 займає 12 колонок, #2 та #3 — по 6 колонок. */
+@media (min-width: 768px) {
+  .viewport-context { flex-basis: 17%; }
+  .viewport-title, .viewport-range { height: 50%; }
+  .grid-footer { flex-basis: 16%; }
+  .on-xs { display: none; } .on-sm { display: inline; }
+  .task2 .grid-box { height: 50%; color: #fff; }
+  .box-number { font-size: clamp(36px, 12vh, 72px); }
+  .grid-box2 .dimension-line, .grid-box3 .dimension-line { display: block; }
+}
+
+/* md: перший ряд 8 + 4; третій блок переноситься на всю ширину. */
+@media (min-width: 992px) {
+  .grid-footer { flex-basis: 20%; }
+  .on-sm { display: none; } .on-md { display: inline; }
+  .task2 .grid-box1, .task2 .grid-box2 { height: 60%; color: #fff; }
+  .task2 .grid-box3 { height: 40%; color: #fff; }
+  .box-number { font-size: clamp(48px, 14vh, 96px); }
+  .grid-box1 .dimension-line { display: block; }
+  .grid-box3 .dimension-line { display: none; }
+}
+
+/* lg: один ряд на 6 + 3 + 3 колонки. */
+@media (min-width: 1200px) {
+  .on-md { display: none; } .on-lg { display: inline; }
+  .task2 .grid-box { height: 100%; color: #fff; }
+  .box-number { font-size: clamp(56px, 18vh, 120px); }
+  .grid-box3 .dimension-line { display: block; }
+}

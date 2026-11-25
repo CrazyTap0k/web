@@ -1,0 +1,34 @@
+/* Ширини встановлюють col-xs/sm/md/lg Bootstrap, висоти — власні правила.
+   xs: 7 рядків; sm: 5 рядків; md/lg: 3 рядки. */
+.task1 .header-row, .task1 .footer-row { flex: 2 1 0; }
+.task1 .main-row { flex: 3 1 0; }
+.task1 .region { padding: 6px; overflow-wrap: anywhere; background: #fff;
+  color: #008000; font-size: clamp(16px, 3.5vh, 24px); line-height: 1.3; }
+.task1 .header-row > .region, .task1 .footer-row > .region { height: 50%; }
+.task1 .main-row > .region { height: calc(100% / 3); }
+
+/* 768–991px: обидва меню фіолетові, шапка й підвал діляться навпіл. */
+@media (min-width: 768px) {
+  .task1 .header-row, .task1 .footer-row { flex: 1 1 0; }
+  .task1 .header-row > .region, .task1 .footer-row > .region { height: 100%; }
+  .task1 .region { color: #000; font-size: 14px; }
+  .task1 .header-right, .task1 .content { font-size: 22px; }
+  .task1 .left-menu, .task1 .right-menu { background: #f2b0fa; }
+}
+
+/* 992–1199px: права шапка, контент і лівий підвал — рожеві. */
+@media (min-width: 992px) {
+  .task1 .main-row { flex: 1 1 0; }
+  .task1 .main-row > .region { height: 100%; }
+  .task1 .region { color: #000; font-size: 14px; background: #fff; }
+  .task1 .header-right, .task1 .content, .task1 .footer-left { background: #ffc0cb; }
+}
+
+/* ≥1200px: ліва шапка і правий підвал — золотисті;
+   текст правої шапки червоний, лівого підвала синій. */
+@media (min-width: 1200px) {
+  .task1 .region { background: #fff; color: #000; }
+  .task1 .header-left, .task1 .footer-right { background: #f5d799; }
+  .task1 .header-right { color: #f00; }
+  .task1 .footer-left { color: #00f; }
+}
