@@ -1,0 +1,10 @@
+/* Навчальна симуляція. Цю гілку також виконав Іван Гребенюк. */
+.demo-notice { padding: 16px 20px; border-left: 5px solid #2b6c9c; background: #edf5fc; line-height: 1.6; }
+#demo-student-07 { margin: 16px 0; padding: 20px; border: 2px solid #2b6c9c; color: #194b70; font-size: 1.25rem; font-weight: 700; }
+.demo-steps li { margin: 12px 0; line-height: 1.6; }
+.teamwork-demo code { overflow-wrap: anywhere; }
+.history-table { overflow-x: auto; }
+.history-table table { width: 100%; border-collapse: collapse; font-size: .9rem; }
+.history-table th, .history-table td { padding: 10px 12px; border: 1px solid #b6c9d8; text-align: left; }
+.history-table th { background: #edf5fc; }
+.demo-limit { margin-top: 20px; color: #445969; line-height: 1.6; }
