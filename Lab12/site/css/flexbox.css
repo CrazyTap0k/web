@@ -1,0 +1,163 @@
+/* 3px — проміжок між зовнішніми краями сусідніх блоків.
+   border-box включає рамку 1px у ширину та висоту. */
+.wrapper { width: 100%; height: 100vh; height: 100dvh; padding: 3px; }
+.stage { width: 100%; height: var(--stage-height); }
+.main-column { width: var(--main-width); height: var(--main-height); }
+.blue { width: 100%; height: var(--blue-height); }
+.content { width: 100%; height: var(--content-height); }
+.left-group { width: var(--left-width); height: var(--left-height); }
+.pair { width: 100%; height: var(--pair-height); }
+.cyan { width: var(--cyan-width); height: var(--cyan-height); }
+.red { width: var(--red-width); height: var(--red-height); }
+.green { width: 100%; height: var(--green-height); }
+.yellow { width: var(--yellow-width); height: var(--yellow-height); }
+.gray { width: var(--gray-width); height: var(--gray-height); }
+.orange { width: 100%; height: var(--footer-height); }
+
+
+/* Кожен рівень макета — окремий flex-контейнер. */
+.wrapper, .stage, .main-column, .content, .left-group, .pair {
+  display: flex; gap: 3px; min-width: 0; min-height: 0;
+}
+.wrapper, .main-column, .left-group { flex-direction: column; }
+.stage { flex-direction: var(--stage-direction); }
+.content { flex-direction: var(--content-direction); }
+.pair { flex-direction: var(--pair-direction); }
+/* Розміри вже враховують gap, тому автоматичне стискання вимкнене. */
+.wrapper > *, .stage > *, .main-column > *, .content > *,
+.left-group > *, .pair > * { flex-shrink: 0; }
+
+/* До 500px: усі сім блоків в одну колонку. */
+@media (width < 500px) {
+  .wrapper {
+    --stage-height: calc((100% - 3px) * 0.88);
+    --footer-height: calc((100% - 3px) * 0.12);
+    --main-width: 100%;
+    --main-height: calc((100% - 3px) * 0.84);
+    --gray-width: 100%;
+    --gray-height: calc((100% - 3px) * 0.16);
+    --blue-height: calc((100% - 3px) * 0.22);
+    --content-height: calc((100% - 3px) * 0.78);
+    --left-width: 100%;
+    --left-height: calc((100% - 3px) * 0.75);
+    --yellow-width: 100%;
+    --yellow-height: calc((100% - 3px) * 0.25);
+    --pair-height: calc((100% - 3px) * 0.6);
+    --green-height: calc((100% - 3px) * 0.4);
+    --cyan-width: 100%;
+    --cyan-height: calc((100% - 3px) * 0.5);
+    --red-width: 100%;
+    --red-height: calc((100% - 3px) * 0.5);
+    --stage-direction: column;
+    --content-direction: column;
+    --pair-direction: column;
+  }
+}
+
+/* Від 500px: центральні блоки поряд, сіра панель унизу. */
+@media (min-width: 500px) {
+  .wrapper {
+    --stage-height: calc((100% - 3px) * 0.88);
+    --footer-height: calc((100% - 3px) * 0.12);
+    --main-width: 100%;
+    --main-height: calc((100% - 3px) * 0.84);
+    --gray-width: 100%;
+    --gray-height: calc((100% - 3px) * 0.16);
+    --blue-height: calc((100% - 3px) * 0.3);
+    --content-height: calc((100% - 3px) * 0.7);
+    --left-width: calc((100% - 3px) * 0.6);
+    --left-height: 100%;
+    --yellow-width: calc((100% - 3px) * 0.4);
+    --yellow-height: 100%;
+    --pair-height: calc((100% - 3px) * 0.45);
+    --green-height: calc((100% - 3px) * 0.55);
+    --cyan-width: calc((100% - 3px) * 0.5);
+    --cyan-height: 100%;
+    --red-width: calc((100% - 3px) * 0.5);
+    --red-height: 100%;
+    --stage-direction: column;
+    --content-direction: row;
+    --pair-direction: row;
+  }
+}
+
+/* Від 750px: сіра панель праворуч, жовтий блок під зеленим. */
+@media (min-width: 750px) {
+  .wrapper {
+    --stage-height: calc((100% - 3px) * 0.8);
+    --footer-height: calc((100% - 3px) * 0.2);
+    --main-width: calc((100% - 3px) * 0.8);
+    --main-height: 100%;
+    --gray-width: calc((100% - 3px) * 0.2);
+    --gray-height: 100%;
+    --blue-height: calc((100% - 3px) * 0.35);
+    --content-height: calc((100% - 3px) * 0.65);
+    --left-width: 100%;
+    --left-height: calc((100% - 3px) * 0.7);
+    --yellow-width: 100%;
+    --yellow-height: calc((100% - 3px) * 0.3);
+    --pair-height: calc((100% - 3px) * 0.45);
+    --green-height: calc((100% - 3px) * 0.55);
+    --cyan-width: calc((100% - 3px) * 0.5);
+    --cyan-height: 100%;
+    --red-width: calc((100% - 3px) * 0.5);
+    --red-height: 100%;
+    --stage-direction: row;
+    --content-direction: column;
+    --pair-direction: row;
+  }
+}
+
+/* Від 950px: повний макет, ліва група займає 65% центру. */
+@media (min-width: 950px) {
+  .wrapper {
+    --stage-height: calc((100% - 3px) * 0.8);
+    --footer-height: calc((100% - 3px) * 0.2);
+    --main-width: calc((100% - 3px) * 0.8);
+    --main-height: 100%;
+    --gray-width: calc((100% - 3px) * 0.2);
+    --gray-height: 100%;
+    --blue-height: calc((100% - 3px) * 0.4);
+    --content-height: calc((100% - 3px) * 0.6);
+    --left-width: calc((100% - 3px) * 0.65);
+    --left-height: 100%;
+    --yellow-width: calc((100% - 3px) * 0.35);
+    --yellow-height: 100%;
+    --pair-height: calc((100% - 3px) * 0.45);
+    --green-height: calc((100% - 3px) * 0.55);
+    --cyan-width: calc((100% - 3px) * 0.5);
+    --cyan-height: 100%;
+    --red-width: calc((100% - 3px) * 0.5);
+    --red-height: 100%;
+    --stage-direction: row;
+    --content-direction: row;
+    --pair-direction: row;
+  }
+}
+
+/* Від 1200px: пропорції зразка, ліва група займає 60% центру. */
+@media (min-width: 1200px) {
+  .wrapper {
+    --stage-height: calc((100% - 3px) * 0.8);
+    --footer-height: calc((100% - 3px) * 0.2);
+    --main-width: calc((100% - 3px) * 0.8);
+    --main-height: 100%;
+    --gray-width: calc((100% - 3px) * 0.2);
+    --gray-height: 100%;
+    --blue-height: calc((100% - 3px) * 0.4);
+    --content-height: calc((100% - 3px) * 0.6);
+    --left-width: calc((100% - 3px) * 0.6);
+    --left-height: 100%;
+    --yellow-width: calc((100% - 3px) * 0.4);
+    --yellow-height: 100%;
+    --pair-height: calc((100% - 3px) * 0.45);
+    --green-height: calc((100% - 3px) * 0.55);
+    --cyan-width: calc((100% - 3px) * 0.5);
+    --cyan-height: 100%;
+    --red-width: calc((100% - 3px) * 0.5);
+    --red-height: 100%;
+    --stage-direction: row;
+    --content-direction: row;
+    --pair-direction: row;
+  }
+}

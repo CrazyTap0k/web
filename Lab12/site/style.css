@@ -1,0 +1,72 @@
+/* Лабораторна №12. Гребенюк Іван Юрійович, 305-ТН, №07. */
+* { box-sizing: border-box; }
+html { min-height: 100%; }
+body { margin: 0; min-height: 100vh; min-height: 100dvh; display: flex;
+  flex-direction: column; color: #18252d; background: #fff; font: 1rem/1.45 Arial, sans-serif; }
+a { color: #125d9c; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible {
+  outline: 3px solid #164d79; outline-offset: 3px;
+}
+.site-header { display: flex; align-items: center; justify-content: space-between;
+  gap: 20px; padding: 6px 24px; background: #3da1f5; border-bottom: 2px solid #e45050; }
+.brand { color: #071c2d; text-decoration: none; line-height: 1.15; }
+.brand strong { display: block; font-size: 1.5rem; }
+.brand span { display: block; padding-left: 20px; font-size: .875rem; font-weight: 700; color: #fff; }
+.site-header nav { display: flex; flex-wrap: wrap; gap: 8px 18px; }
+.site-header nav a { font-size: .875rem; color: #071c2d; text-decoration: none; }
+.site-header nav a:hover, .site-header nav a[aria-current="page"] { text-decoration: underline; }
+main { flex: 1 0 auto; }
+.site-footer { flex-shrink: 0; padding: 32px 16px; text-align: center; color: #fff; background: #26343a; }
+.site-footer p { margin: 0; font-size: .875rem; }
+.content-page { width: min(100% - 40px, 1080px); margin: 32px auto; }
+.content-page h1 { margin: 0 0 12px; font-size: clamp(1.7rem, 4vw, 2.2rem); }
+.content-page h2 { margin: 28px 0 10px; font-size: 1.3rem; }
+.content-page li { margin: 8px 0; }
+.author { color: #425a6c; }
+.registration-main { padding: 20px 16px 32px; }
+.registration { width: min(100%, 360px); margin: 0 auto; border: 1px solid #aaa; }
+.registration h1 { margin: 0; padding: 8px 12px; color: #fff; background: #3da1f5;
+  font-size: 1.125rem; text-align: center; }
+.registration form { padding: 16px; }
+.form-field { margin-bottom: 12px; }
+.form-field label { display: block; margin-bottom: 5px; font-size: .875rem; }
+.form-field input, .form-field select { display: block; width: 100%; min-width: 0;
+  height: 36px; border: 1px solid #d8d8d8; border-radius: 2px; padding: 6px 10px;
+  background: #fff; color: #17232d; font: inherit; }
+.form-actions { text-align: right; }
+button { border: 1px solid #999; border-radius: 2px; padding: 6px 8px; background: #eee;
+  color: #17232d; font: inherit; font-size: .875rem; cursor: pointer; }
+button:hover { background: #ddd; }
+.form-result { margin: 12px 0 0; color: #21613b; font-size: .875rem; }
+.commands-main { width: min(100% - 40px, 1220px); margin: 12px auto 24px; }
+.commands-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px; }
+.command-group { margin-bottom: 24px; }
+.command-group h2 { margin: 0 0 8px; font-size: 1.25rem; line-height: 1.2; }
+.command-group dl { margin: 0; }
+.command-group dl > div { margin-bottom: 13px; }
+.command-group dt { font-size: .875rem; color: #444; }
+.command-group dd { margin: 3px 0 0; }
+.command-group code { display: block; font: 700 .875rem/1.4 Consolas, monospace;
+  color: #17232d; overflow-wrap: anywhere; }
+.command-group.create h2 { color: #4d9fbc; }
+.command-group.observe h2 { color: #3887a1; }
+.command-group.branches h2 { color: #59a622; }
+.command-group.change h2 { color: #5a8e24; }
+.command-group.sync h2 { color: #df562a; }
+.command-group.help h2 { color: #c3441c; }
+.training-link { font-size: .875rem; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+/* Унікальний стиль особистого запису в спільному списку групи. */
+#student-07-grebenuk { padding: 18px 22px; border-left: 6px solid #dd5744;
+  background: #edf5ff; color: #1c548c; font-size: clamp(1.35rem, 3vw, 2rem); }
+@media (max-width: 949px) { .commands-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 699px) {
+  .site-header { align-items: flex-start; flex-direction: column; gap: 10px; padding: 10px 16px; }
+  .site-header nav { gap: 8px 14px; }
+}
+@media (max-width: 499px) {
+  .commands-grid { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .commands-main, .content-page { width: calc(100% - 32px); }
+  .brand strong { font-size: 1.3rem; }
+}
