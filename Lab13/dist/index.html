@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Гребенюк Іван Юрійович (Grebenuk), 305-ТН, №07">
+  <meta name="description" content="Каталог мультфільмів і мультсеріалів. Лабораторна №13: Gulp та SCSS.">
+  <title>Мультфільми та мультсеріали — Grebenuk, 305-ТН</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/app.min.css">
+  <script src="js/app.min.js" defer></script>
+</head>
+<body>
+  <div class="site-wrapper">
+    <header class="site-header">
+      <a class="logo" href="index.html" aria-label="Кіно — головна сторінка">
+        <span class="logo__window"><img src="images/catalog.png" alt="KINO CLUB" width="1920" height="1080"></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" hidden>Меню</button>
+      <nav class="primary-nav" id="primary-nav" aria-label="Головне меню"><ul><li><a href="index.html#cartoons">Фільми</a></li><li><a href="index.html#series">Серіали</a></li><li><a href="index.html#cartoons">Мультфільми</a></li><li><a href="index.html#collections">Підбірки</a></li><li><a href="index.html#comments">Спільнота</a></li><li><a href="index.html#news">Анонси</a></li><li><a href="index.html#year-2023">2023</a></li><li><a href="index.html#top-100">Топ 100</a></li></ul></nav>
+      <button class="search-toggle" type="button" aria-label="Відкрити пошук" aria-controls="search-panel" aria-expanded="false"><span aria-hidden="true">⌕</span></button>
+    </header><div class="search-panel" id="search-panel" hidden>
+      <label for="catalog-search">Пошук за назвою</label>
+      <input id="catalog-search" type="search" placeholder="Назва мультфільму" autocomplete="off">
+      <p class="search-status" id="search-status" role="status" aria-live="polite"></p>
+    </div><main id="collections">
+      <h1 class="sr-only">Каталог мультфільмів і мультсеріалів</h1>
+      <span id="top-100" class="section-anchor" aria-hidden="true"></span><section class="catalog-section catalog-section--cartoons" id="cartoons" aria-labelledby="cartoons-heading">
+      <div class="section-heading"><h2 id="cartoons-heading">Найкращі мультфільми</h2><a href="#cartoons">Всі мультфільми <span aria-hidden="true">❯</span></a></div>
+      <div class="rail">
+        <span class="rail__chevron rail__chevron--left" aria-hidden="true">‹</span>
+        <div class="movie-grid"><article class="movie-card" data-title="Моя незграбна фея">
+          <a class="movie-card__image" href="details/fairy.html" tabindex="-1" aria-hidden="true"><span class="poster" style="--poster-x: -122.8915663%; --poster-y: -102.8000000%">
+      <img src="images/catalog.png" alt="Постер: Моя незграбна фея" width="1920" height="1080" loading="lazy" decoding="async">
+    </span></a>
+          <h3><a class="movie-card__title" href="details/fairy.html">Моя незграбна фея</a></h3>
+        </article><article class="movie-card" data-title="Полум’яне Серце / Вогняне серце">
+          <a class="movie-card__image" href="details/fireheart.html" tabindex="-1" aria-hidden="true"><span class="poster" style="--poster-x: -237.3493976%; --poster-y: -102.8000000%">
+      <img src="images/catalog.png" alt="Постер: Полум’яне Серце / Вогняне серце" width="1920" height="1080" loading="lazy" decoding="async">
+    </span></a>
+          <h3><a class="movie-card__title" href="details/fireheart.html">Полум’яне Серце / Вогняне серце</a></h3>
+        </article><article class="movie-card" data-title="Базз Рятівник">
+          <a class="movie-card__image" href="details/lightyear.html" tabindex="-1" aria-hidden="true"><span class="poster" style="--poster-x: -352.4096386%; --poster-y: -102.8000000%">
+      <img src="images/catalog.png" alt="Постер: Базз Рятівник" width="1920" height="1080" loading="lazy" decoding="async">
+    </span></a>
+          <h3><a class="movie-card__title" href="details/lightyear.html">Базз Рятівник</a></h3>
+        </article><article class="movie-card" data-title="Вовча ватага">
+          <a class="movie-card__image" href="details/wolfwalkers.html" tabindex="-1" aria-hidden="true"><span class="poster" style="--poster-x: -467.4698795%; --poster-y: -102.8000000%">
+      <img src="images/catalog.png" alt="Постер: Вовча ватага" width="1920" height="1080" loading="lazy" decoding="async">
+    </span></a>
+          <h3><a class="movie-card__title" href="details/wolfwalkers.html">Вовча ватага</a></h3>
+        </article><article class="movie-card" data-title="Кіт у чоботях 2: Останнє бажання">
+          <a class="movie-card__image" href="details/puss-in-boots.html" tabindex="-1" aria-hidden="true"><span class="poster" style="--poster-x: -582.5301205%; --poster-y: -102.8000000%">
+      <img src="images/catalog.png" alt="Постер: Кіт у чоботях 2: Останнє бажання" width="1920" height="1080" loading="lazy" decoding="async">
+    </span></a>
+          <h3><a class="movie-card__title" href="details/puss-in-boots.html">Кіт у чоботях 2: Останнє бажання</a></h3>
+        </article><article class="movie-card" data-title="Незвичайний світ">
+          <a class="movie-card__image" href="details/strange-world.html" tabindex="-1" aria-hidden="true"><span class="poster" style="--poster-x: -696.9879518%; --poster-y: -102.8000000%">
+      <img src="images/catalog.png" alt="Постер: Незвичайний світ" width="1920" height="1080" loading="lazy" decoding="async">
+    </span></a>
+          <h3><a class="movie-card__title" href="details/strange-world.html">Незвичайний світ</a></h3>
+        </article><article class="movie-card" data-title="Тед-мандрівник: Закляття мумії">
+          <a class="movie-card__image" href="details/tad.html" tabindex="-1" aria-hidden="true"><span class="poster" style="--poster-x: -812.0481928%; --poster-y: -102.8000000%">
+      <img src="images/catalog.png" alt="Постер: Тед-мандрівник: Закляття мумії" width="1920" height="1080" loading="lazy" decoding="async">
+    </span></a>
+          <h3><a class="movie-card__title" href="details/tad.html">Тед-мандрівник: Закляття мумії</a></h3>
+        </article><article class="movie-card" data-title="Монстри на канікулах 4">
+          <a class="movie-card__image" href="details/hotel-transylvania.html" tabindex="-1" aria-hidden="true"><span class="poster" style="--poster-x: -926.5060241%; --poster-y: -102.8000000%">
+      <img src="images/catalog.png" alt="Постер: Монстри на канікулах 4" width="1920" height="1080" loading="lazy" decoding="async">
+    </span></a>
+          <h3><a class="movie-card__title" href="details/hotel-transylvania.html">Монстри на канікулах 4</a></h3>
+        </article></div>
+        <span class="rail__chevron rail__chevron--right" aria-hidden="true">›</span>
+      </div>
+    </section><section class="catalog-section catalog-section--series" id="series" aria-labelledby="series-heading">
+      <div class="section-heading"><h2 id="series-heading">Мультсеріали</h2><a href="#series">Всі мультсеріали <span aria-hidden="true">❯</span></a></div>
+      <div class="rail">
+        <span class="rail__chevron rail__chevron--left" aria-hidden="true">‹</span>
+        <div class="movie-grid"><article class="movie-card" data-title="Совиний Дім">
+          <a class="movie-card__image" href="details/owl-house.html" tabindex="-1" aria-hidden="true"><span class="poster" style="--poster-x: -122.8915663%; --poster-y: -257.6000000%">
+      <img src="images/catalog.png" alt="Постер: Совиний Дім" width="1920" height="1080" loading="lazy" decoding="async">
+    </span></a>
+          <h3><a class="movie-card__title" href="details/owl-house.html">Совиний Дім</a></h3>
+        </article><article class="movie-card" data-title="Дрони-вбивці">
+          <a class="movie-card__image" href="details/murder-drones.html" tabindex="-1" aria-hidden="true"><span class="poster" style="--poster-x: -237.3493976%; --poster-y: -257.6000000%">
+      <img src="images/catalog.png" alt="Постер: Дрони-вбивці" width="1920" height="1080" loading="lazy" decoding="async">
+    </span></a>
+          <h3><a class="movie-card__title" href="details/murder-drones.html">Дрони-вбивці</a></h3>
+        </article><article class="movie-card" data-title="Лего Ніндзяго: Майстри Спінжитсу">
+          <a class="movie-card__image" href="details/ninjago.html" tabindex="-1" aria-hidden="true"><span class="poster" style="--poster-x: -352.4096386%; --poster-y: -257.6000000%">
+      <img src="images/catalog.png" alt="Постер: Лего Ніндзяго: Майстри Спінжитсу" width="1920" height="1080" loading="lazy" decoding="async">
+    </span></a>
+          <h3><a class="movie-card__title" href="details/ninjago.html">Лего Ніндзяго: Майстри Спінжитсу</a></h3>
+        </article><article class="movie-card" data-title="My Little Pony: Залиш свою відзнаку">
+          <a class="movie-card__image" href="details/my-little-pony.html" tabindex="-1" aria-hidden="true"><span class="poster" style="--poster-x: -467.4698795%; --poster-y: -257.6000000%">
+      <img src="images/catalog.png" alt="Постер: My Little Pony: Залиш свою відзнаку" width="1920" height="1080" loading="lazy" decoding="async">
+    </span></a>
+          <h3><a class="movie-card__title" href="details/my-little-pony.html">My Little Pony: Залиш свою відзнаку</a></h3>
+        </article><article class="movie-card" data-title="Південний Парк">
+          <a class="movie-card__image" href="details/south-park.html" tabindex="-1" aria-hidden="true"><span class="poster" style="--poster-x: -582.5301205%; --poster-y: -257.6000000%">
+      <img src="images/catalog.png" alt="Постер: Південний Парк" width="1920" height="1080" loading="lazy" decoding="async">
+    </span></a>
+          <h3><a class="movie-card__title" href="details/south-park.html">Південний Парк</a></h3>
+        </article><article class="movie-card" data-title="Гріфіни / Сім’янин">
+          <a class="movie-card__image" href="details/family-guy.html" tabindex="-1" aria-hidden="true"><span class="poster" style="--poster-x: -696.9879518%; --poster-y: -257.6000000%">
+      <img src="images/catalog.png" alt="Постер: Гріфіни / Сім’янин" width="1920" height="1080" loading="lazy" decoding="async">
+    </span></a>
+          <h3><a class="movie-card__title" href="details/family-guy.html">Гріфіни / Сім’янин</a></h3>
+        </article><article class="movie-card" data-title="Сила принцес">
+          <a class="movie-card__image" href="details/princess-power.html" tabindex="-1" aria-hidden="true"><span class="poster" style="--poster-x: -812.0481928%; --poster-y: -257.6000000%">
+      <img src="images/catalog.png" alt="Постер: Сила принцес" width="1920" height="1080" loading="lazy" decoding="async">
+    </span></a>
+          <h3><a class="movie-card__title" href="details/princess-power.html">Сила принцес</a></h3>
+        </article><article class="movie-card" data-title="Дракони: Дев’ять світів">
+          <a class="movie-card__image" href="details/dragons.html" tabindex="-1" aria-hidden="true"><span class="poster" style="--poster-x: -926.5060241%; --poster-y: -257.6000000%">
+      <img src="images/catalog.png" alt="Постер: Дракони: Дев’ять світів" width="1920" height="1080" loading="lazy" decoding="async">
+    </span></a>
+          <h3><a class="movie-card__title" href="details/dragons.html">Дракони: Дев’ять світів</a></h3>
+        </article></div>
+        <span class="rail__chevron rail__chevron--right" aria-hidden="true">›</span>
+      </div>
+    </section><div class="bottom-grid">
+        <section id="news" aria-labelledby="news-heading">
+          <div class="section-heading"><h2 id="news-heading">Новини</h2><a href="#year-2023">Всі новини <span aria-hidden="true">❯</span></a></div>
+          <article class="news-item" id="year-2023"><h3><a href="#cartoons">Добірка анімаційних пригод</a></h3><p>Мультфільми та мультсеріали зі зразка 2023 року в одному каталозі.</p></article>
+        </section>
+        <section id="comments" aria-labelledby="comments-heading">
+          <div class="section-heading"><h2 id="comments-heading">Кращі коментарі</h2></div>
+          <p class="empty-comments">Коментарів ще немає.</p>
+        </section>
+      </div>
+    </main><footer class="site-footer" id="about">
+      <p>Лабораторна №13 · Гребенюк Іван Юрійович (Grebenuk) · 305-ТН · №07</p>
+      <a href="index.html">До каталогу</a>
+    </footer>
+  </div>
+</body>
+</html>

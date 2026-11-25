@@ -1,0 +1,49 @@
+@use 'sass:math';
+@use 'variables' as v;
+@use 'mixins' as m;
+.section-heading { display: flex; align-items: center; justify-content: space-between; gap: 20px;
+  min-height: 56px; padding: 10px 60px; background: v.$heading;
+  h2 { margin: 0; color: v.$white; font-size: 24px; line-height: 1.2; }
+  > a { flex-shrink: 0; font-size: 18px; font-weight: 700; }
+}
+.rail { position: relative; padding: 12px 36px 10px;
+  &__chevron { position: absolute; top: 38%; color: #5f6364; font: 700 64px/1 Arial, sans-serif; pointer-events: none;
+    &--left { left: 0; } &--right { right: 0; }
+  }
+}
+.movie-grid { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: v.$card-gap; }
+.movie-card { min-width: 0; background: #101212;
+  &__image { display: block; }
+  h3 { margin: 0; }
+  &__title { display: block; min-height: 58px; padding: 8px 3px; text-align: center; font-size: 18px; line-height: 1.25; font-weight: 700; }
+}
+/* Спрайт зі зразка: 1920x1080; кожне вікно постера — 166x250. */
+.poster { position: relative; display: block; width: 100%; aspect-ratio: 166 / 250; overflow: hidden; background: #171b1e;
+  img { position: absolute; left: var(--poster-x); top: var(--poster-y); width: math.div(1920, 166) * 100%;
+    max-width: none; height: auto; }
+}
+.catalog-section--series { background: v.$series;
+  .section-heading { background: #2b2c2e; }
+  .movie-card { background: #20313e; }
+}
+.bottom-grid { display: grid; grid-template-columns: 7fr 3fr; background: #171b1e;
+  > section { min-width: 0; }
+  .section-heading { padding-left: 60px; padding-right: 36px; }
+}
+.news-item, .empty-comments { margin: 0; padding: 18px 36px 24px 60px; font-size: 16px; line-height: 1.5; }
+.news-item { h3 { margin: 0 0 6px; color: v.$white; font-size: 18px; } p { margin: 0; } }
+@include m.below(1179px) { .movie-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@include m.below(749px) {
+  .movie-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+  .section-heading { padding: 12px 20px; h2 { font-size: 21px; } > a { font-size: 14px; } }
+  .rail { padding: 14px 20px; }
+  .rail__chevron { display: none; }
+  .movie-card__title { font-size: 16px; }
+  .bottom-grid { grid-template-columns: minmax(0, 1fr); .section-heading { padding-left: 20px; } }
+  .news-item, .empty-comments { padding: 16px 20px; }
+}
+@include m.below(499px) {
+  .movie-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+  .section-heading { align-items: flex-start; flex-direction: column; gap: 6px; }
+  .movie-card__title { font-size: 15px; }
+}
